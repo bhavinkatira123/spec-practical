@@ -195,6 +195,10 @@ input[type="checkbox"]:checked {
     @media (max-width: 768px) {
       width: 100%;
     }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
     .loader-container {
       display: flex;
       align-items: center;
@@ -222,17 +226,28 @@ input[type="checkbox"]:checked {
     }
 
     .artical-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+      padding: 16px;
       border-bottom: 2px solid #dee1e6;
-      padding-bottom: 15px;
       margin: 20px 0px;
+      &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
       @media (max-width: 768px) {
         padding-bottom: 6px;
       }
       .card-sub-container {
         display: flex;
         align-items: center;
-        img {
-          object-fit: cover;
+        .img-container {
+          height: 72px;
+          width: 90px;
+          img {
+            object-fit: cover;
+            border-radius: 5px;
+          }
         }
         .title-container {
           padding: 0px 15px;

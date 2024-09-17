@@ -39,7 +39,7 @@ export const fetchArticals = createAsyncThunk<IArticalData[]>(
   "articals/fetchArticals",
   async () => {
     const response = await fetch(
-      "https://dummy-rest-api.specbee.site/api/v1/news"
+      `${process.env.REACT_APP_BACK_END_URL}api/v1/news`
     );
     return response.json();
   }
